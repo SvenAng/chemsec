@@ -1,0 +1,221 @@
+{
+    "key": "group_5550c92647508",
+    "title": "Karta",
+    "fields": [
+        {
+            "key": "field_5550ce41e40cc",
+            "label": "",
+            "name": "bllt-map",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": 1,
+            "layout": "row",
+            "button_label": "L\u00e4gg till rad",
+            "sub_fields": [
+                {
+                    "key": "field_52fcbf762e341",
+                    "label": "Centrum",
+                    "name": "map-center",
+                    "type": "google_map",
+                    "instructions": "Fyll i den adress eller klicka d\u00e4r kartan ska centreras.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "center_lat": "62.033005",
+                    "center_lng": "17.378546",
+                    "zoom": 4,
+                    "height": 320
+                },
+                {
+                    "key": "field_52fcbf842e342",
+                    "label": "Zoom niv\u00e5",
+                    "name": "map-zoom",
+                    "type": "number",
+                    "instructions": "Ange hur inzoomad kartan ska vara. Fr\u00e5n 0 till 17.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 14,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": 17,
+                    "step": 1,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_55ccc1aef8b6c",
+                    "label": "Style",
+                    "name": "map-style",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_52fcbcebb9213",
+                    "label": "Mark\u00f6rer",
+                    "name": "map-markers",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "min": "",
+                    "max": "",
+                    "layout": "row",
+                    "button_label": "L\u00e4gg till mark\u00f6r",
+                    "sub_fields": [
+                        {
+                            "key": "field_52fcbd0eb9214",
+                            "label": "Adress",
+                            "name": "map-marker-address",
+                            "type": "google_map",
+                            "instructions": "Fyll i en adress eller klicka d\u00e4r kartan ska mark\u00f6ren ska placeras.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "center_lat": "62.033005",
+                            "center_lng": "17.378546",
+                            "zoom": 4,
+                            "height": 320
+                        },
+                        {
+                            "key": "field_558c11a258b48",
+                            "label": "Egen ikon",
+                            "name": "custom-icon",
+                            "type": "true_false",
+                            "instructions": "Ers\u00e4tter Googles standard ikon",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Ja",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_52fcbd4bb9215",
+                            "label": "Ikon",
+                            "name": "map-marker-icon",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_558c11a258b48",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 10,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5550e4339de6b",
+                            "label": "Ikon ankarpunkt",
+                            "name": "map-marker-icon-anchor",
+                            "type": "text",
+                            "instructions": "Pixel koordinater fr\u00e5n \u00f6vre v\u00e4nstra h\u00f6rnet till punkten d\u00e4r mark\u00f6ren ska centreras.\r\nTill exempel om mark\u00f6rikonen \u00e4r en pil s\u00e5 \u00e4r ankarpunkten p\u00e5 pilens spets.\r\nAnge v\u00e4rden separerade med ett komma tecken.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_558c11a258b48",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "13,18",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/contact.php"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1440170461
+}

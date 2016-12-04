@@ -1,0 +1,75 @@
+/* ------------------------------------------------------------------------------------------
+* mixins.php
+* This file contains LESS functions
+* ----------------------------------------------------------------------------------------- */
+
+// ............................................................
+// https://github.com/seven-phases-max/less.curious
+// .for
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+// .for-each
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
+
+// v1: Easier to use than bootstrap's... I think - Kang
+// v2: Added a foreach loop so you can add multiple properties to one transition. - Patrik
+.transition(@selectors:all, @animation:ease-in-out, @duration:.2s) {
+    .for(@selectors); .-each(@selector) {
+        -webkit-transition+:  @selector @animation @duration;
+        -moz-transition+:     @selector @animation @duration;
+        -ms-transition+:      @selector @animation @duration;
+        -o-transition+:       @selector @animation @duration;
+        transition+:          @selector @animation @duration;
+    }
+}
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: "icons";
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.black-button {
+    padding: 10px 11px 9px;
+    display: inline-block;
+    background: #4b4b4b;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: @font-secondary;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    .transition(background);
+
+    &:hover, &:focus {
+        background: #ee7203;
+        color: #fff;
+    }
+}
+
+.orange-button {
+    .black-button;
+    background: #ee7203;
+    color: #fff;
+
+    &:hover, &:focus {
+        background: #f3953f;
+    }
+}

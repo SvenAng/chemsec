@@ -1,0 +1,7 @@
+/* Detta är en quickfix
+	Modifiera via LESS istället.
+ */
+
+.img-responsive {
+	max-width: inherit  !important;
+}

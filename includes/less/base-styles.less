@@ -1,0 +1,325 @@
+/* ------------------------------------------------------------------------------------------
+* base-styles.php
+* These are styles that should not need to be changed
+* ----------------------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons.eot?56603867');
+  src: url('../fonts/icons.eot?56603867#iefix') format('embedded-opentype'),
+       url('../fonts/icons.woff?56603867') format('woff'),
+       url('../fonts/icons.ttf?56603867') format('truetype'),
+       url('../fonts/icons.svg?56603867#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    background: #FFF;
+    font-family: @font-family-base;
+    font-size: @body-font-size;
+    color: @body-font-color;
+    font-weight: @body-font-weight;
+    letter-spacing: 0.025em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-family: @headers-font-family;
+    font-weight: @headers-font-weight;
+    color: @headers-font-color;
+    line-height: 1.1em;
+}
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+h3.block-title {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: @font-secondary;
+    text-transform: uppercase;
+    color: #3f3f3f;
+
+    a {
+        color: inherit;
+    }
+}
+
+p {
+    line-height: 1.5;
+}
+
+p, 
+ul, 
+ol { 
+    margin-bottom: 20px; 
+}
+
+ul, 
+ol { 
+    list-style-position: outside;
+    padding-left: 20px;  
+}
+
+ul { 
+    list-style: disc;
+}
+ol {    
+    list-style: decimal; 
+}
+
+em, 
+i { 
+    font-style: italic; 
+    color: #FFF;
+}
+
+b, 
+strong {
+    font-weight: bold;
+    color: #222;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+a {
+    color: @a-font-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: @a-hover-font-color;
+        text-decoration: none;
+        outline: none;
+    }
+
+    &:active {
+        color: @a-active-font-color;
+        outline: none;
+    }
+}
+
+label {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+// Browser Upgrade Prompt
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.row div[class^="col-"] {
+    margin-bottom: 30px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.logotype {
+    img + .site-name,
+    .site-description {
+        display: none;
+    }
+}
+
+// Responsive image - Keep images from scaling beyond the width of their parents.
+.img-responsive {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
+.post-thumbnail {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.slider {
+    display: none;
+
+    .slick-prev:before, .slick-next:before {
+        .transition;
+    }
+}
+
+#mobile-nav-trigger {
+    display: none;
+    top: 20px;
+    left: 20px;
+    width: 85px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+
+    span {
+        transition: .25s ease-in-out;
+    }
+
+    .line {
+        display: block;
+        position: absolute;
+        height: 5px;
+        width: 100%;
+        background: @body-font-color;
+        opacity: 1;
+        left: 50%;
+        transform: rotate(0deg) translateX(-50%);
+
+        &:nth-child(1) {
+          top: 0px;
+        }
+
+        &:nth-child(2), &:nth-child(3) {
+          top: 8px;
+        }
+
+        &:nth-child(4) {
+          top: 16px;
+        }
+    }
+
+    &.open {
+
+        .line {
+            left: 0;
+
+            &:nth-child(1), &:nth-child(4) {
+                opacity: 0;
+                margin-left: 0%;
+                transform: translateX(0%);
+            }
+
+            &:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+
+#main-navigation-content .search-form {
+    .search-submit {
+        width: 32px;
+        height: 32px;
+        padding: 6px 8px;
+        float: left;
+        background: none;
+        border: 0;
+        color: #fff;
+        font-size: 18px;
+
+        .transition(color);
+
+        &:hover {
+            color: #f3953f;
+        }
+    }
+
+    label {
+        max-width: 0;
+        width: calc(~"100% - 32px");
+        overflow: hidden;
+        float: left;
+        .transition;
+
+        .search-field {
+            width: 80%;
+            padding: 6px 4px;
+            color: #fff;
+        }
+    }
+
+    &.open label {
+        max-width: 400px;
+    }
+
+    .search-field {
+        border: 0;
+        background: none;
+        border-bottom: 2px solid #f3953f;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+.social-links {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .social-link {
+            display: inline-block;
+            margin-right: 3px;
+
+            a {
+                width: 45px;
+                height: 45px;
+                display: block;
+                font-size: 38px;
+                color: #fff;
+                .transition(color);
+
+                &:hover {
+                    color: #ee7203;
+                }
+            }
+        }
+    }
+}
+
+.map-container {
+    position: relative;
+    .map-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+}

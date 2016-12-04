@@ -1,0 +1,153 @@
+@media (max-width: 1130px) and (min-width: 992px) {
+    #business-tools, #business-group {
+        .slick-slider {
+            padding: 0 75px;
+
+            .slick-prev {
+                left: 0;
+            }
+            .slick-next {
+                right: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+
+    #main-navigation #main-navigation-content {
+        margin-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        #menu-close {
+            right: 20px;
+        }
+    }
+
+    #site-header #header-banner {
+        height: 460px;
+
+        #header-banner-content-wrapper #header-banner-content {
+            margin-top: 60px;
+
+            p {
+                font-size: 75px;
+            }
+        }
+    }
+
+    #site-main .site-content {
+        .main + .groups .persons {
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+            /* Hide table headers (but not display: none;, for accessibility) */
+            thead tr { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+        
+            td { 
+                /* Behave  like a "row" */
+                border: none;
+                position: relative;
+                padding-left: 60px; 
+
+                &.td-image {
+                    padding-left: 0;
+                }
+            }
+            
+            td:before { 
+                /* Now like a table header */
+                position: absolute;
+                /* Top/left values mimic padding */
+                top: 4px;
+                left: 0;
+                width: 60px;
+                white-space: nowrap;
+
+                font-weight: 400;
+                font-size: 12px;
+                color: #9f9f9f
+            }
+            
+            /*
+            Label the data
+            */
+            td:nth-of-type(2):before { content: "Name"; }
+            td:nth-of-type(3):before { content: "Phone"; }
+            td:nth-of-type(4):before { content: "Email"; }
+        }
+
+        .content-footer {
+            margin-bottom: 30px;
+        }
+    }
+
+    #site-footer .logotype {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: @screen-xs-max) {
+    .map-container .map-overlay {
+        pointer-events: auto;
+    }
+
+    #site-main {
+        .sidebar-column {
+            padding-right: 15px;
+            border: none;
+        }
+        .main-column {
+            padding-left: 15px;
+            margin: 0;
+            border: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    #site-header #header-banner {
+        #header-banner-content-wrapper #header-banner-content p {
+            font-size: 55px;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    #site-header #header-banner {
+        #header-banner-content-wrapper #header-banner-content p {
+            font-size: 45px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #site-header #header-banner {
+        #header-banner-content-wrapper #header-banner-content p {
+            font-size: 45px;
+        }
+
+        .chemsec-button {
+            padding: 12px 12px;
+        }
+    }
+    #site-header #header {
+
+        #mobile-nav-trigger {
+            margin-top: 0;
+            .title {
+                display: none;
+            }
+        }
+    }
+}

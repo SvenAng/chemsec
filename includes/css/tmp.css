@@ -1,0 +1,95 @@
+/*
+Theme Name: ChemSec
+Theme URI: http://www.chemsec.org
+Temp CSS
+Flyttas till LESS senare
+25 april 2016 Sven Ängermark
+*/
+
+#site-header #header-banner #header-banner-content-wrapper #header-banner-content .front_2 p{
+	/*color:  #000 !important;*/
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0;
+}
+.mylightbox{
+	display: none;
+}
+featherlight-content
+
+.featherlight-content .mylightbox{
+	display: block !important;
+}
+.featherlight .featherlight-inner .mylightbox {
+    display: block;
+}
+.submit{
+	border: none;
+}
+em{
+	color: #000;	
+}
+#site-main .site-sidebar .back-link.reset-link{
+	display: none;
+}
+@media only screen and (min-width: 1200px) {
+	
+	
+}
+/* 992 - 1199*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	
+	
+}
+/* 768 - 991 */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+	
+	
+}
+/* 481 - 767 */
+@media screen and (min-width: 481px) and (max-width: 767px){
+	#site-header #header-banner #header-banner-content-wrapper #header-banner-content p {
+	    /*font-size: 35px;*/
+	    margin: 0 0 30px;
+	}
+	
+}
+/*  - 480 */
+@media  screen and (max-width: 480px) {
+	#site-header #header-banner #header-banner-content-wrapper #header-banner-content p {
+	    font-size: 38px;
+	    margin: 0 0 20px;
+	}
+}
+
+
+.mc4wp-form-basic button, .mc4wp-form-basic input[type="submit"], .mc4wp-form-basic input[type="button"], .mc4wp-form-theme button, .mc4wp-form-theme input[type="submit"], .mc4wp-form-theme input[type="button"] {
+	border: 0;
+	background: #ee7203;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1;
+	padding: 10px 11px 9px;
+	text-transform: uppercase;
+	transition: background 0.2s ease-in-out 0s;
+	width: auto;
+}
+
+
+#site-main .site-sidebar .tags .tag {
+    margin: 0 5px 5px 0;
+
+}
+.leftmenu-strong{
+	color: #6F6F6F;
+	font-weight: 600;
+}
+
+ul.months{
+	display: none;
+}
+.chemsec-button{
+	width: 190px;
+}
+ 
