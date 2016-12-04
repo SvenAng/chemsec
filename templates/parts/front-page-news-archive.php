@@ -4,7 +4,7 @@
     <?php
         global $post;
         $posts = get_posts(array(
-            'numberposts' => 3,
+            'numberposts' => 4,
             'post_type' => 'publication',
             'post_status' => 'publish',
             'orderby' => 'post_date',

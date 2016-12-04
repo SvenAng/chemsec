@@ -10,7 +10,7 @@
 function init_function() {
 
     // Register styles and scripts
-    wp_register_style(  'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,700,300,600;Raleway:500,600,700');
+    wp_register_style(  'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,700,300,400,600;Raleway:500,600,700');
      wp_register_style(  'tmp-css',     TEMPLATE_CSS_DIRECTORY_URI . '/tmp.css');
     wp_register_style(  'main-css',     TEMPLATE_CSS_DIRECTORY_URI . '/main.min.css',               array( 'google-fonts' ) );
     wp_register_script('custom-script', TEMPLATE_JS_DIRECTORY_URI . '/tmp.js',                      array( 'jquery' ), false, true );
