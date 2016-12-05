@@ -114,6 +114,7 @@ ul.months{
     display: none;
 }
 .chemsec-button{
-    width: 190px;
+    width: 200px;
+    padding: 15px 6px;
 }
 
